@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicholas Herrera — Paintings</title>
+  <meta name="description" content="Paintings by Nicholas Herrera.">
+  <style>
+    :root { --bg:#f7f5f0; --text:#171717; --muted:#777; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; background:var(--bg); color:var(--text);
+      font-family: Arial, Helvetica, sans-serif; font-weight:400;
+      line-height:1.45;
+    }
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:28px 4vw; position:sticky; top:0; background:rgba(247,245,240,.94);
+      backdrop-filter:blur(8px); z-index:5;
+    }
+    .name { font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
+    nav { display:flex; gap:24px; font-size:13px; }
+    nav a { color:inherit; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    main { max-width:1500px; margin:0 auto; padding:2vw 4vw 10vw; }
+    .intro { max-width:560px; padding:9vw 0 11vw; }
+    .intro h1 { font-size:clamp(34px,5vw,70px); font-weight:400; letter-spacing:-.035em; margin:0 0 20px; }
+    .intro p { margin:0; color:#555; font-size:15px; max-width:480px; }
+    .section-title { font-size:12px; text-transform:uppercase; letter-spacing:.1em; margin:0 0 30px; }
+    .gallery {
+      display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:7vw 3vw;
+    }
+    figure { margin:0; cursor:pointer; }
+    figure img {
+      display:block; width:100%; height:auto; aspect-ratio:4/5;
+      object-fit:cover; background:#ddd;
+    }
+    figcaption { padding-top:12px; font-size:13px; }
+    .meta { color:var(--muted); margin-top:3px; font-size:12px; }
+    .about {
+      max-width:650px; padding:16vw 0 8vw;
+      font-size:17px; line-height:1.65;
+    }
+    .contact { border-top:1px solid #ccc; padding:35px 0 0; }
+    .contact a { color:inherit; }
+    footer { padding:8vw 4vw 30px; color:#888; font-size:11px; }
+    #lightbox {
+      display:none; position:fixed; inset:0; background:rgba(20,20,20,.94);
+      z-index:20; align-items:center; justify-content:center; padding:4vw;
+    }
+    #lightbox.open { display:flex; }
+    #lightbox img { max-width:94vw; max-height:90vh; object-fit:contain; }
+    #close {
+      position:absolute; top:24px; right:30px; color:white; background:none;
+      border:0; font-size:28px; cursor:pointer; font-weight:200;
+    }
+    @media(max-width:700px) {
+      header { padding:20px 5vw; }
+      nav { gap:14px; }
+      main { padding:0 5vw 15vw; }
+      .intro { padding:18vw 0 22vw; }
+      .gallery { grid-template-columns:1fr; gap:14vw; }
+      .about { padding:25vw 0 18vw; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="name">Nicholas Herrera</div>
+  <nav>
+    <a href="#paintings">Paintings</a>
+    <a href="#drawings">Drawings</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Paintings</h1>
+    <p>Landscape paintings exploring place, memory, and the American West.</p>
+  </section>
+
+  <section id="paintings">
+    <h2 class="section-title">Selected work</h2>
+    <div class="gallery">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85" alt="Sample landscape painting">
+        <figcaption>Untitled I <div class="meta">2026 · Watercolor on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=85" alt="Sample mountain landscape">
+        <figcaption>Untitled II <div class="meta">2026 · Watercolor on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85" alt="Sample landscape">
+        <figcaption>Untitled III <div class="meta">2025 · Watercolor on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85" alt="Sample mountain landscape">
+        <figcaption>Untitled IV <div class="meta">2025 · Watercolor on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85" alt="Sample desert landscape">
+        <figcaption>Untitled V <div class="meta">2025 · Watercolor on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85" alt="Sample landscape">
+        <figcaption>Untitled VI <div class="meta">2024 · Watercolor on paper</div></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="drawings">
+    <h2 class="section-title">Drawings</h2>
+    <div class="gallery">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1400&q=85" alt="Sample drawing">
+        <figcaption>Untitled I <div class="meta">2026 · Ink on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1400&q=85" alt="Sample drawing">
+        <figcaption>Untitled II <div class="meta">2026 · Graphite on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=1400&q=85" alt="Sample drawing">
+        <figcaption>Untitled III <div class="meta">2025 · Ink on paper</div></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=1400&q=85" alt="Sample drawing">
+        <figcaption>Untitled IV <div class="meta">2025 · Graphite on paper</div></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-title">About</h2>
+    <p>
+      I paint landscapes as a way of paying attention to place—its histories,
+      contradictions, and the ways people imagine the land around them.
+      This paragraph is a placeholder for your artist statement.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+  </section>
+</main>
+
+<footer>© 2026 Nicholas Herrera</footer>
+
+<div id="lightbox" aria-hidden="true">
+  <button id="close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  const box = document.getElementById('lightbox');
+  const boxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('figure img').forEach(img => {
+    img.addEventListener('click', () => {
+      boxImg.src = img.src;
+      boxImg.alt = img.alt;
+      box.classList.add('open');
+      box.setAttribute('aria-hidden','false');
+    });
+  });
+  function closeBox() {
+    box.classList.remove('open');
+    box.setAttribute('aria-hidden','true');
+    boxImg.src='';
+  }
+  document.getElementById('close').addEventListener('click', closeBox);
+  box.addEventListener('click', e => { if(e.target === box) closeBox(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeBox(); });
+</script>
+</body>
+</html>
